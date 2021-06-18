@@ -1,4 +1,18 @@
-body{
-background-color: blueviolet;
+.container-bienvenida{
+    background-image: url("./imagenes/TV-frame.png");
+    height: 100vh;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
 
+.img-rickandmorty{
+    background-image: url("./imagenes/WPRM.png");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+h1{
+    color: aliceblue;
 }
