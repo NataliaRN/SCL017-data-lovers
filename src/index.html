@@ -9,23 +9,30 @@
   </head>
   <body>
     <div id="root">
+
+      <!-- Interfaz de la portada -->
+
     <div class="bienvenida">
       <h2 class="titulo-bienvenida">Bienvenidos al sitio de</h2>
       <img src="./Assets/IMGS/titulo-principal.png" alt="titulo-principal" class="titulo">
     </div>
-    <div class="conjunto-fondo desktop">
-      <img src="./Assets/IMGS/fondo.png" alt="fondo" class="background">
-      <img src="./Assets/IMGS/TV-frame.png" alt="tvframe" class="top">
+    <div class="conjunto-fondo">
+      <img src="./Assets/IMGS/fondo.png" alt="fondo" class="background only-desktop">
+      <img src="./Assets/IMGS/TV-frame.png" alt="tvframe" class="top only-desktop">
+      <img src="./Assets/IMGS/fondo-movil.png" alt="" class="movil">
     </div>
 
     <button type="button" class="boton-play">
-      <a href="" target="_blank" rel="noopener noreferrer" >
+      <a href="./main.html" target="_self" rel="noopener noreferrer" >
         <img src="./Assets/IMGS/play.svg" alt="boton" srcset="">
       </a>
     </button>
 
+    <!-- Fin de a portada. El botón play nos lleva al main.html -->
+
+
 
     </div>
-     <script src="main.js" type="module"></script>
+     
   </body>
 </html>
