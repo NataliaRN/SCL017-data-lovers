@@ -37,13 +37,16 @@ Luego de llegar a un acuerdo y en base a una lluviacantidad de ideas, creamos en
 Así, al tener ya un diseño definido, acordamos traspasar los bocetos en papel a nuestro prototipo de alta fidelidad en Figma,finalmente, luego de ajustar unos detalles, se realizó el boceto final en Figma con los colores, imágenes y texto finales.
 
 ## Bocetos en papel
-¡[https://github.com/NataliaRN/SCL017-data-lovers/blob/master/Imagenes/Prototipos/Portada1.jpg]
-¡[https://github.com/NataliaRN/SCL017-data-lovers/blob/master/Imagenes/Prototipos/Portada2.jpeg]
+
+¡[Prototipo1](https://github.com/NataliaRN/SCL017-data-lovers/blob/master/Imagenes/Prototipos/Portada1.jpg)
+
+¡[Prototipo2](https://github.com/NataliaRN/SCL017-data-lovers/blob/master/Imagenes/Prototipos/Portada2.jpeg)
 
 ### Historias de usuario
 
 
 ### Resultado diseño final
-![https://github.com/NataliaRN/SCL017-data-lovers/blob/master/Imagenes/Prototipos/Prototipo%20Alta%20Fidelidad.pnggit]
+
+![Figma](https://github.com/NataliaRN/SCL017-data-lovers/blob/master/Imagenes/Prototipos/Prototipo%20Alta%20Fidelidad.pnggit)
 
 He borrado todo porque esta muy largo
