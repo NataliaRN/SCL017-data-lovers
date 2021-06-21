@@ -1,5 +1,6 @@
 *{
   margin: 0;
+  padding: 0;
   
 }
 
@@ -7,11 +8,15 @@ body{
 background-color: black;
 background-repeat: no-repeat;
 width: 100vw;
-height: 100vh;
-color: blanchedalmond;
+height: 100px;
+color: whitesmoke;
 font-family: "Monda" , monospace;
 overflow:auto;
 opacity: 20px;  
+}
+
+.movil{
+  display: none;
 }
 
 
@@ -25,9 +30,8 @@ opacity: 20px;
 .background{
   display: block;
   position: absolute;
-  width: 70vw;
-  top: 18%;
-  left: 8%;
+  top: 10px;
+  width: 80vw;
   z-index: -1;
 }
 
@@ -54,9 +58,103 @@ opacity: 20px;
 
 .boton-play{
   position: absolute;
-  top: 23rem;
-  right: 6rem;
+  top: 45%;
+  left: 79%;
   z-index: 2;
   outline: none;
   border: none;
+  background: none;
+  cursor: pointer;
+  animation: pulse-green 3s infinite;
+  border-radius: 90px;
+  
+  
 }
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 5px 5px 20px 5px rgba(60, 255, 0, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 5px 5px 5px 20px rgba(70, 217, 51, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 5px 5px 20px 5px rgba(117, 217, 51, 0);
+  }
+}
+
+  
+
+/* vista responsive para dispositivos desde 320px hasta 1224*/
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 1224px){
+      .only-desktop{
+        display: none;
+      }
+
+
+      .movil{
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        z-index: -1;
+
+      }
+
+      .bienvenida{
+        margin: 0;
+        padding: 5px;
+        width: auto;
+      }
+
+      .titulo-bienvenida{
+        font-size: 3em;
+        margin: 1em;
+
+      }
+
+      .boton-play img{
+        width: 100%;
+        height: 100%;
+      }
+
+        .boton-play{
+          position: absolute;
+          top: 30%;
+          left: 40%;
+          z-index: 1;
+          outline: none;
+          border: none;
+          background: none;
+          cursor: pointer;
+          animation: pulse-green 3s infinite;
+          border-radius: 90px;
+          
+          
+        }
+        
+        @keyframes pulse-green {
+          0% {
+            transform: scale(0.95);
+            box-shadow: 5px 5px 20px 5px rgba(60, 255, 0, 0.7);
+          }
+          
+          70% {
+            transform: scale(1);
+            box-shadow: 5px 5px 5px 20px rgba(70, 217, 51, 0);
+          }
+          
+          100% {
+            transform: scale(0.95);
+            box-shadow: 5px 5px 20px 5px rgba(117, 217, 51, 0);
+          }
+        }
+
+  }
