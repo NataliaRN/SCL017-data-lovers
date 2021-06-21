@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    background-image: url(./Assets/IMGS/fondo-estrellitas.png);
+    background-repeat: none;
+    width: 100vw;
+    z-index: -1;
+}
+
+.img-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .logo-header{
+    position: fixed;
+    top: 5%;
+    left: 65%;
+    width: 30%;
+    z-index: 2;
+    justify-content: flex-end;
+  }
