@@ -1,9 +1,18 @@
-// estas funciones son de ejemplo
+export const toOrderAZ = (arrayrickymorty, orderType) => {
+  if (orderType == 1) sortJSON(arrayrickymorty, "name", "asc");
+  else sortJSON(arrayrickymorty, "name", "desc");
 
-export const example = () => {
-  return 'example';
+  return arrayrickymorty;
 };
-
-export const anotherExample = () => {
-  return 'OMG';
+export const sortJSON = (data, key, order) => {
+  return data.sort(function (a, b) {
+    let x = a[key],
+      y = b[key];
+    if (order === "asc") {
+      return x < y ? -1 : 1;
+    }
+    else{
+      return x > y ? -1 : 1;
+    }
+  });
 };
