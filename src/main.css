@@ -71,12 +71,13 @@ select{
     width: 160px;
   } 
 
-.mgsearch{
+#search{
   color:whitesmoke;
+  margin:5px;
   cursor: pointer;
   }
 
-  .mgsearch:hover{
+  #search:hover{
     color: rgb(26, 197, 146);
     transition: .2s ease;
   }
