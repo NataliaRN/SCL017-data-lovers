@@ -1,6 +1,20 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import datosRyM  from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+console.log(datosRyM);
+
+//get elements
+
+let lupa = document.getElementById("search");
+
+
+//eventos
+
+lupa.addEventListener("click", buscarNombre);
+
+
+//funciones
+
+function buscarNombre(){
+  console.log("haces click en lupa")
+
+}

@@ -34,50 +34,59 @@ header{
   }
 
   nav{
-    display: flex;  
-    background-color: #000000;
-    color: #ffffff;
-    width: 100%;
-    height: 40px;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    color: #ffffff;
+    width: 100vw;
+    height: 40px;
+    margin: 10px;
 }
 
 .filtro-orden{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
 }
 
 select{
-  border-radius: 3px;
-  background-color:whitesmoke;
-  height: 21px;
-  font: size 12px;
-  width: 160px;
-  flex:0 0 auto;
+  border-radius: 5px;
+  font-size:  14px;
   padding: 2px;
+  height: 100%;
+  background-color: blanchedalmond;
 }
 
 .search-bar{
-  flex:0 0 auto;
+  background-color: blanchedalmond;
   padding: 2px;
-  }
-.inputsearch{
+  border-radius: 5px;
+}
+
+.input-search{
+    border: none;
     border-radius:5px;
-    background-color:whitesmoke;
-    height: 20px;
-    font: size 14px;
-    width: 160px;
+    font-size: 16px;
+    padding: 2px;
+    background-color: blanchedalmond;
+
   } 
 
-#search{
-  color:whitesmoke;
-  margin:5px;
-  cursor: pointer;
+  button{
+    border: none;
+    cursor: pointer;
   }
 
-  #search:hover{
-    color: rgb(26, 197, 146);
-    transition: .2s ease;
+  .lupa-img{
+    width: 15px;
+    height: 18px;
+    background-color: blanchedalmond;
+  }
+
+  button:hover{
+    border: 2px solid rgb(128, 255, 0);
+    border-radius: 5px;
+    
   }
