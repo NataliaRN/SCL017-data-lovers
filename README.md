@@ -13,7 +13,7 @@
 
 ## 1. Preámbulo
 
-Rick y Morty, es una serie de animación estadounidense para adultos creada por Justin Roiland y Dan Harmon en 2013. Hasta ahora cuenta, con 4 temporadas y 41 episodios, la serie sigue las desventuras de un científico, Rick Sanchez, y su influenciable nieto, Morty Smith, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos.
+[Rick y Morty](https://es.wikipedia.org/wiki/Rick-y-Morty), es una serie de animación estadounidense para adultos creada por Justin Roiland y Dan Harmon en 2013. Hasta ahora cuenta, con 4 temporadas y 41 episodios, la serie sigue las desventuras de un científico, Rick Sanchez, y su influenciable nieto, Morty Smith, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos.
 Después de haber estado desaparecido durante casi 20 años, Rick Sánchez llega de imprevisto a la puerta de la casa de su hija Beth y se va a vivir con ella y su familia utilizando el garaje como su laboratorio personal.
 
 
@@ -26,7 +26,7 @@ La aplicación que creamos entrega la facilidad de poder filtrar por categorías
 El producto tiene la característica de ser responsiva, por lo tanto, esta diseñada para funcionar de forma optima en dispositivos como celulares, tablets, etc.
 ## 3. Definicion del usuario
 
-Los usuarios objetivos del producto son espectadores que ya conocen la serie (con un rango etario de entre 25 y 40 años más o menos). Estos usuarios ya conocen la serie y a todos los personajes principales y secundarios que aparecen en la serie a lo largo de las 4 temporadas. Nuestra web otorgara a los fanaticos y no tanto diversion e informacion sobre todos los personajes ya que cuenta con filtros de búsqueda para conocer todos los datos relevantes y sabosos. Así, los usuarios podrán tener acceso a todos sus personajes favoritos de la serie.
+Los usuarios objetivos del producto son espectadores que ya conocen la serie (con un rango etario de entre 25 y 40 años más o menos). Estos usuarios ya conocen la serie y a todos los personajes principales y secundarios que aparecen en la serie a lo largo de las 4 temporadas. Nuestra web otorgara a los fanaticos y no tanto diversion e informacion sobre todos los personajes, ya que cuenta con filtros de búsqueda para conocer todos los datos relevantes y sabosos. Así, los usuarios podrán tener acceso a todos sus personajes favoritos de la serie.
 
 ## 4. Etapa de diseño
 
@@ -37,12 +37,17 @@ Luego de llegar a un acuerdo y en base a una lluviacantidad de ideas, creamos en
 Así, al tener ya un diseño definido, acordamos traspasar los bocetos en papel a nuestro prototipo de alta fidelidad en Figma,finalmente, luego de ajustar unos detalles, se realizó el boceto final en Figma con los colores, imágenes y texto finales.
 
 ## Bocetos en papel
-¡[https://drive.google.com/file/d/15wWwytnl6PLlNh356wMJSK9J_RqKSUPr/view?usp=sharing]
-¡[https://drive.google.com/file/d/1d8G2YpVw4MV7M2BmtKtiyk-tk_SyqO9W/view?usp=sharing]
+
+¡[Prototipo1](https://github.com/NataliaRN/SCL017-data-lovers/blob/master/Imagenes/Prototipos/Portada1.jpg)
+
+¡[Prototipo2](https://github.com/NataliaRN/SCL017-data-lovers/blob/master/Imagenes/Prototipos/Portada2.jpeg)
 
 ### Historias de usuario
 
 
-### Resultado diseño final
+## Resultado diseño final
+
+![Figma](https://github.com/NataliaRN/SCL017-data-lovers/blob/master/Imagenes/Prototipos/Prototipo%20Alta%20Fidelidad.pnggit)
+
 
 He borrado todo porque esta muy largo
