@@ -1,18 +1,20 @@
-export const toOrderAZ = (arrayrickymorty, orderType) => {
-  if (orderType == 1) sortJSON(arrayrickymorty, "name", "asc");
-  else sortJSON(arrayrickymorty, "name", "desc");
+import data from './data/rickandmorty/rickandmorty.js';
 
-  return arrayrickymorty;
+const datosRyM= {
+
+  personajes(){
+    return data.results;
+  },  
+
+  filterByName(enterName) {
+    return data.pokemon.filter(pokemon => {
+        return pokemon.name.toLowerCase().concat(" " + pokemon.num).includes(enterName.toLowerCase())
+    });
+},
+
+
+
 };
-export const sortJSON = (data, key, order) => {
-  return data.sort(function (a, b) {
-    let x = a[key],
-      y = b[key];
-    if (order === "asc") {
-      return x < y ? -1 : 1;
-    }
-    else{
-      return x > y ? -1 : 1;
-    }
-  });
-};
+
+
+export default datosRyM;
