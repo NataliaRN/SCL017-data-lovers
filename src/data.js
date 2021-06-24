@@ -1,9 +1,20 @@
-// estas funciones son de ejemplo
+import data from './data/rickandmorty/rickandmorty.js';
 
-export const example = () => {
-  return 'example';
+const datosRyM= {
+
+  personajes(){
+    return data.results;
+  },  
+
+  filterByName(enterName) {
+    return data.pokemon.filter(pokemon => {
+        return pokemon.name.toLowerCase().concat(" " + pokemon.num).includes(enterName.toLowerCase())
+    });
+},
+
+
+
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+
+export default datosRyM;
