@@ -71,12 +71,12 @@ select{
     font-size: 16px;
     padding: 2px;
     background-color: blanchedalmond;
-
-  } 
+    } 
 
   button{
     border: none;
     cursor: pointer;
+    border: 2px solid transparent;
   }
 
   .lupa-img{

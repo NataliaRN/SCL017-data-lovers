@@ -1,21 +1,32 @@
-import datosRyM  from './data/rickandmorty/rickandmorty.js';
+import datosRyM from './data.js';
 
 console.log(datosRyM);
 
-//get elements
+
+
+//Variables y get emelements
 
 let lupa = document.getElementById("search");
 
 
 //eventos
 
-lupa.addEventListener("click", buscarNombre);
+lupa.addEventListener("click", filtraNombre);
+
 
 
 //funciones
 
-function buscarNombre(){
-  console.log("haces click en lupa")
+
+function filtraNombre(){
+
+  let catchInput = (document.getElementById("input-search").value);
+  let textCatchInput = catchInput.charAt(0).toUpperCase() + catchInput.slice(1).toLowerCase();
+
+
+
+  console.log(catchInput , textCatchInput , "funciona la función");
+
 
 }
 

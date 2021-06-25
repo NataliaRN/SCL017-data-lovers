@@ -1,17 +1,20 @@
 import data from './data/rickandmorty/rickandmorty.js';
 
+let personajes = data.results;
+console.log(personajes);
+
+
 const datosRyM= {
 
-  personajes(){
-    return data.results;
-  },  
+  //función que debe filtrar por nombre de input y devolver un array con todos los match
+  filterByName : function(catchInput) { 
+    let nombreInput = catchInput;
+    console.log(nombreInput);
 
-  filterByName(enterName) {
-    return data.pokemon.filter(pokemon => {
-        return pokemon.name.toLowerCase().concat(" " + pokemon.num).includes(enterName.toLowerCase())
-    });
+      
+    
+    
 },
-
 
 
 };
