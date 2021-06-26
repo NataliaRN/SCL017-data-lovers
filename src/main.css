@@ -5,7 +5,7 @@
 
 body{
     background-color: black;
-    background-image: url(./Assets/IMGS/fondo-estrellitas.png);
+    background-image: url(./Assets/IMGS/fondoestesi.png);
     background-repeat: none;
     color: ghostwhite;
     font-family: "Monda" , monospace;
@@ -16,7 +16,7 @@ body{
 
 header{
  color: black;
- width: auto;
+ width: 100% auto;
 }
 
 .img-header{
@@ -36,7 +36,7 @@ header{
   nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     color: #ffffff;
     width: 100vw;
@@ -56,13 +56,13 @@ select{
   font-size:  14px;
   padding: 2px;
   height: 100%;
-  background-color: blanchedalmond;
+  background-color: #fff7ea;
 }
 
 .search-bar{
-  background-color: blanchedalmond;
+  background-color: #fff7ea;
   padding: 2px;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .input-search{
@@ -70,8 +70,7 @@ select{
     border-radius:5px;
     font-size: 16px;
     padding: 2px;
-    background-color: blanchedalmond;
-
+    background-color: #fff7ea;
   } 
 
   button{
@@ -80,13 +79,13 @@ select{
   }
 
   .lupa-img{
+    align-items:baseline;
     width: 15px;
     height: 18px;
-    background-color: blanchedalmond;
+    background-color: #fff7ea;
   }
 
   button:hover{
-    border: 2px solid rgb(128, 255, 0);
+    border: 2px solid hsl(175, 88%, 39%);
     border-radius: 5px;
-    
   }

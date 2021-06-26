@@ -18,3 +18,4 @@ function buscarNombre(){
   console.log("haces click en lupa")
 
 }
+
