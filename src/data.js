@@ -11,7 +11,7 @@ const datosRyM= {
 
     for (let i=0 ; i < personajes.length ; i++){
       arrayPersonajes.push(personajes[i]);
-      console.log(arrayPersonajes)
+      
 
     }
 
@@ -25,7 +25,6 @@ const datosRyM= {
   filterByName : function(catchInput) { 
     const nombreInput = catchInput.toLowerCase();
     const arrayNombres = [];
-    console.log(arrayNombres);
 
       //iteramos cada elemento y se comparó con el nombre ingresado, devuelve array de nombres que coinciden
     for (let i=0 ; i< personajes.length; i++){
@@ -33,7 +32,6 @@ const datosRyM= {
         arrayNombres.push(personajes[i]);
       }
     }
-    console.log(arrayNombres);
     return arrayNombres;
     
 
