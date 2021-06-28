@@ -17,6 +17,7 @@ lupa.addEventListener("click", filtraNombre);
 //funciones
 
 
+
 function filtraNombre(){
 
   let catchInput = (document.getElementById("input-search").value);
