@@ -16,7 +16,6 @@ const datosRyM= {
     }
 
     return arrayPersonajes;
-    console.log(arrayPersonajes);
   },
 
   

@@ -51,13 +51,21 @@ header{
     background-color: rgb(0, 0, 0);
 }
 
-select{
+.filtro select{
+
   border-radius: 5px;
-  font-size:  14px;
-  padding: 2px;
-  height: 100%;
+  font-size: 16px;
+  padding: 5px;
   background-color: #fff7ea;
 }
+
+.filtro option{
+  background-color: #fff7ea;
+  font-size: 16px;
+  
+}
+
+
 
 .search-bar{
   background-color: #fff7ea;
@@ -98,7 +106,7 @@ select{
     height: 50px;
   }
 
-  main{
+  .main-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -107,12 +115,13 @@ select{
   }
 
   .container{
-    width: 50%;
+    width: 80vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    flex-basis: 20%;
   }
 
   .fichasContainer{
@@ -121,20 +130,20 @@ select{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 199px;
     height: 287px;
+    margin: 10%;
   }
 
   .imagen-ficha-main{
     border-radius: 8px;
-    width: 158px;
-    height: 158px;
+    width: 90%;
   }
   
  .nombreFichaMain{
-   width: 70%;
-   font-size: large; 
-   text-align: center;
+   margin-top: 2%;
+   width: 80%;
+   font-size: large;
    text-transform: uppercase;
  }
