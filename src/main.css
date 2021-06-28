@@ -73,9 +73,11 @@ select{
     background-color: #fff7ea;
   } 
 
+
   button{
     border: none;
     cursor: pointer;
+    border: 2px solid transparent;
   }
 
   .lupa-img{
