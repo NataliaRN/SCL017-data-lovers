@@ -11,12 +11,11 @@ const datosRyM= {
 
     for (let i=0 ; i < personajes.length ; i++){
       arrayPersonajes.push(personajes[i]);
-      
+     
 
     }
 
     return arrayPersonajes;
-    
   },
 
   
