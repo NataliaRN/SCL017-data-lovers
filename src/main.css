@@ -115,13 +115,7 @@ header{
   }
 
   .container{
-    width: 80vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 20%;
+    ;
   }
 
   .fichasContainer{
@@ -146,4 +140,9 @@ header{
    width: 80%;
    font-size: large;
    text-transform: uppercase;
+ }
+ .btn-anterior{
+ 
+  
+
  }
