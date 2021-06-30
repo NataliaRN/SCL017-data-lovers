@@ -2,23 +2,16 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 let personajes = data.results; //Esto es un array de objetos
 
-
-
 const datosRyM= {
-
   mostrarTodos: function () {
     const arrayPersonajes= [];
 
     for (let i=0 ; i < personajes.length ; i++){
       arrayPersonajes.push(personajes[i]);
-     
-
     }
 
     return arrayPersonajes;
   },
-
-  
 
   //función que debe filtrar por nombre de input y devolver un array con todos los match
   filterByName : function(catchInput) { 
@@ -35,10 +28,33 @@ const datosRyM= {
     
 
 
+
+      });
+
+    }, 
+    // Función ordenar Z -A 
+    ordenZA : function (arrayOrden) {
+      let dataEnter = (arrayOrden != undefined && arrayOrden.length > 0) ? arrayOrden : data.results;
+      console.log(dataEnter);
+      return dataEnter.sort(function(a, b) {
+          if (a.name < b.name) {
+              return 1;
+          }
+          if (a.name > b.name) {
+              return -1;
+          }
+          return 0;
+
+      });
+      
+    },
+        
+
       
     
     
 },
+
 
 
 };
