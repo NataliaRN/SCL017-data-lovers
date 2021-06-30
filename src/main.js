@@ -3,17 +3,28 @@ console.log(datosRyM);
 
 
 //Variables, constantes y atrapadas de elementos
-
-let lupa = document.getElementById("search");
+const lupa = document.getElementById("search");
 const todosArray = datosRyM.mostrarTodos();
-const main = document.getElementById("main-container")
+const main = document.getElementById("main-container");
+let selectInput = document.getElementById("filtro");
+let arrayOrden; 
 
 //eventos
 window.addEventListener('load' , mostrarTodos);
 lupa.addEventListener("click", filtraNombre);
+selectInput.addEventListener("change", ()=> { //Función para disparar más de un evento
+  const value = selectInput.options[selectInput.selectedIndex].value;
+  switch (value) {
+    case 'A-Z' :  ordenAZ();
+      break;
+  
+    case 'Z-A' : ordenZA();
+      break;
+  }
+})
+
 
 //funciones
-
 
 function mostrarTodos() {
 
@@ -42,6 +53,8 @@ function filtraNombre(){
   if(arrayNombres.length === 0){
     console.log("El objeto está vacío");  //Hacer mensaje de error dinámico y resetear el input
   };
+    
+  main.innerHTML = "";
 
   for(let i = 0 ; i<arrayNombres.length ;  i++){ //Iteracción para sacar la imagen y el nombre
 
@@ -51,13 +64,56 @@ function filtraNombre(){
                         <h2 class="nombreFichaMain">${arrayNombres[i].name}</h2>
                        </div>
                      </div>`
+ };
 
 
-  };
+}
+
+
+function ordenAZ() {
+
+  arrayOrden = datosRyM.ordenAZ(arrayOrden);
+
+  main.innerHTML = "";
+
+  for(let i = 0 ; i<20;  i++){ //Iteracción para sacar la imagen y el nombre
+
+    main.innerHTML += `<div class="container">
+                      <div class="fichasContainer">
+                        <img src="${arrayOrden[i].image}" class="imagen-ficha-main">
+                        <h2 class="nombreFichaMain">${arrayOrden[i].name}</h2>
+                       </div>
+                     </div>`
+ };
 
 
 
+console.log('esta funcionando la funcion de opcion AZ');
 
+}
+
+function ordenZA() {
+
+  arrayOrden = datosRyM.ordenZA(arrayOrden);
+
+  main.innerHTML = "";
+
+  for(let i = 0 ; i<20;  i++){ //Iteracción para sacar la imagen y el nombre
+
+    main.innerHTML += `<div class="container">
+                      <div class="fichasContainer">
+                        <img src="${arrayOrden[i].image}" class="imagen-ficha-main">
+                        <h2 class="nombreFichaMain">${arrayOrden[i].name}</h2>
+                       </div>
+                     </div>`
+ };
+
+
+
+console.log('esta funcionando la funcion de opcion ZA');
+
+
+  
 }
 
 
