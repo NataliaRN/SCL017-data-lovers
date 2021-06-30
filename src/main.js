@@ -24,7 +24,13 @@ selectInput.addEventListener("change", ()=> { //Función para disparar más de u
 
 //funciones
 function mostrarTodos() {
+
+
+  for(let i = 0 ; i< 10 ;  i++){ //Iteracción para sacar la imagen y el nombre
+   
+
   for(let i = 0 ; i< 20 ;  i++){ //Iteración para sacar la imagen y el nombre
+
   main.innerHTML += `<div class="container">
                       <div class="fichasContainer">
                         <img src="${todosArray[i].image}" class="imagen-ficha-main">
@@ -91,7 +97,7 @@ function filtraNombre(){
 
   if(arrayNombres.length === 0){
     console.log("El objeto está vacío");  //Hacer mensaje de error dinámico y resetear el input
-  };
+  }
     
   main.innerHTML = "";
   for(let i = 0 ; i<arrayNombres.length ;  i++){ //Iteracción para sacar la imagen y el nombre
@@ -101,7 +107,13 @@ function filtraNombre(){
                         <h2 class="nombreFichaMain">${arrayNombres[i].name}</h2>
                        </div>
                      </div>`
+
+ }
+
+
+
  };
+
 }
 
 function ordenAZ() {
@@ -114,7 +126,13 @@ function ordenAZ() {
                         <h2 class="nombreFichaMain">${arrayOrden[i].name}</h2>
                        </div>
                      </div>`
+
+ }
+
+
+
  };
+
 console.log('esta funcionando la funcion de opcion AZ');
 }
 
@@ -128,8 +146,10 @@ function ordenZA() {
                         <h2 class="nombreFichaMain">${arrayOrden[i].name}</h2>
                        </div>
                      </div>`
+
  };
 console.log('esta funcionando la funcion de opcion ZA');  
+
 }
 
 

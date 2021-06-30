@@ -36,11 +36,25 @@
     </div>
   </nav>
  
+ 
+  <main class="main-container" id="main-container"></main>
+  <nav class="pagination" role="navegation" aria-level="pagination">
+    <a class="pagination-previous" id="btn-anterior" v-on:click= "changePage"( page - 1)>Anterior</a>
+
+    <ul class="pagination-list">
+      <li>
+        <a class="pagination-link is-current">1</a>
+      </li>
+    </ul>
+    <a class="pagination-next" id= "btn-next" v-on:click= "changePage"( page + 1)>Siguente</a>
+  </nav>
+
   <main class="main-container" id="main-container">
    <div class="cajaModal" id="cajaModal"></div>
    <div class="contentModal" id="contentModal"></div>
    <div id="backgroundModal" class="backgroundModal"></div>
   </main>
+
 
   <footer>
  aqui va el footer
