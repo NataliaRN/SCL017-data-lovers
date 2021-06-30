@@ -61,11 +61,8 @@ header{
 
 .filtro option{
   background-color: #fff7ea;
-  font-size: 16px;
-  
+  font-size: 16px; 
 }
-
-
 
 .search-bar{
   background-color: #fff7ea;
@@ -125,7 +122,7 @@ header{
   }
 
   .fichasContainer{
-    background-color: #393939;
+    background-color: #4b4b4b;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -134,6 +131,7 @@ header{
     width: 199px;
     height: 287px;
     margin: 10%;
+    cursor: pointer;
   }
 
   .imagen-ficha-main{
@@ -147,3 +145,36 @@ header{
    font-size: large;
    text-transform: uppercase;
  }
+
+ .fichaModal{
+   display: flex;
+   flex-direction: row;
+   background-color: #4b4b4b;
+   border-radius: 15px;
+   width: 700px;
+   height: 350px;
+   padding: 25px;
+ }
+
+ .infoPersonajeModal{
+   display: flex;
+   flex-direction: column;
+ }
+
+ .imgModal{
+   width: 330px;
+   height: 330px;
+   border-radius: 15px;
+   margin-right: 30px;
+ }
+
+ .closeModal{
+   cursor: pointer;
+   font-size: 30px;
+ }
+
+ .episode{
+   width: 300px;
+   height: 300px;
+ }
+
