@@ -32,13 +32,44 @@ const datosRyM= {
       }
     }
     return arrayNombres;
-    
-
-
-      
-    
-    
 },
+
+    //función para ordenar A - Z 
+
+    ordenAZ : function (arrayOrden) {
+      let dataEnter = (arrayOrden != undefined && arrayOrden.length > 0) ? arrayOrden : data.results;
+      console.log(dataEnter);
+
+      return dataEnter.sort(function(a, b) {
+          if (a.name > b.name) {
+              return 1;
+          }
+          if (a.name < b.name) {
+              return -1;
+          }
+          return 0;
+
+      });
+      
+      
+    }, 
+    // Función ordenar Z -A 
+    ordenZA : function (arrayOrden) {
+      let dataEnter = (arrayOrden != undefined && arrayOrden.length > 0) ? arrayOrden : data.results;
+      console.log(dataEnter);
+      return dataEnter.sort(function(a, b) {
+          if (a.name < b.name) {
+              return 1;
+          }
+          if (a.name > b.name) {
+              return -1;
+          }
+          return 0;
+
+      });
+      
+    },
+        
 
 
 };
