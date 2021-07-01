@@ -35,6 +35,7 @@ function mostrarTodos() {
   } 
 }
 
+
 function openModal(todosArray){
 //le doy un espacio en main.html y lo tomo 
 let modalPersonajes = document.getElementById("backgroundModal"); 
@@ -58,11 +59,11 @@ for(let i=0; i<clickPersonajes.length; i++){
           <h2 class="species">${todosArray[i].species} - ${todosArray[i].status}</h2>
           <div class="modalOrigin">
               <p class="titleModal">Dónde vive</p>
-              <div class="origin">${todosArray[i].origin}</div>
+              <div class="origin">${todosArray[i].origin.name}</div>
           </div>
           <div class="modalEpisode">
               <p class="titleModal">Episodios donde aparece</p>
-              <div class="episode">${todosArray[i].episode}</div>
+              <div class="episode">aca tenemos que calcular cuandos episodios son</div>
           </div>
           </div>
        </div>
@@ -101,6 +102,7 @@ function filtraNombre(){
                         <h2 class="nombreFichaMain">${arrayNombres[i].name}</h2>
                        </div>
                      </div>`
+                     
  };
 }
 
