@@ -65,8 +65,7 @@ for(let i=0; i<clickPersonajes.length; i++){
               <div class="episode">${todosArray[i].episode}</div>
           </div>
           </div>
-       </div>
-     </div>`;
+       </div>`;
 
      let closeModal = document.getElementsByClassName("closeModal")[0];
      closeModal.addEventListener("click",()=>{
