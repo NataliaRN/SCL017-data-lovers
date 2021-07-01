@@ -42,7 +42,7 @@ opacity: 20px;
   justify-content: center;
   align-items: center;
   width: 60%;
-  margin-top: 12%;
+  margin-top: 15%;
   margin-left: 12%;
   
 }
@@ -51,21 +51,18 @@ opacity: 20px;
   width: 100%
 }
 
-.titulo-bienvenida{
-  font-size: 2rem;
-  margin: 1em;
-}
+
 
 .boton-play{
   position: absolute;
-  top: 45%;
-  left: 79%;
+  top: 26%;
+  left: 78%;
   z-index: 2;
   outline: none;
   border: none;
   background: none;
   cursor: pointer;
-  animation: pulse-green 3s infinite;
+  animation: pulse-green 5s infinite;
   border-radius: 90px;
   
   
@@ -74,17 +71,17 @@ opacity: 20px;
 @keyframes pulse-green {
   0% {
     transform: scale(0.95);
-    box-shadow: 5px 5px 20px 5px rgba(60, 255, 0, 0.7);
+    box-shadow: 5px 10px 20px 5px rgba(60, 255, 0, 0.7);
   }
   
-  70% {
+  50% {
     transform: scale(1);
-    box-shadow: 5px 5px 5px 20px rgba(70, 217, 51, 0);
+    box-shadow: 5px 10px 20px 5px rgba(18, 219, 255, 0.4);
   }
   
   100% {
     transform: scale(0.95);
-    box-shadow: 5px 5px 20px 5px rgba(117, 217, 51, 0);
+    box-shadow: 5px 10px 20px 5px rgba(253, 242, 82, 0.623);
   }
 }
 
@@ -114,11 +111,6 @@ opacity: 20px;
         width: auto;
       }
 
-      .titulo-bienvenida{
-        font-size: 3em;
-        margin: 1em;
-
-      }
 
       .boton-play img{
         width: 100%;
