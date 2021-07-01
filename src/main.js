@@ -63,7 +63,7 @@ for(let i=0; i<clickPersonajes.length; i++){
           </div>
           <div class="modalEpisode">
               <p class="titleModal">Episodios donde aparece</p>
-              <div class="episode">aca tenemos que calcular cuandos episodios son</div>
+              <div class="episode">${todosArray[i].episode.length}</div>
           </div>
           </div>
        </div>
