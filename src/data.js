@@ -3,7 +3,7 @@ import data from './data/rickandmorty/rickandmorty.js';
 let personajes = data.results; //Esto es un array de objetos
 
 const datosRyM= {
-  mostrarTodos: function () {
+  arrayQueMuestraTodos: function () {
     const arrayPersonajes= [];
 
     for (let i=0 ; i < personajes.length ; i++){
