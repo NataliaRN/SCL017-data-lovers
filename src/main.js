@@ -39,18 +39,49 @@ function mostrarBichosMain(arrayAMostrar) {
                         <h2 class="nombreFichaMain">${arrayAMostrar[i].name}</h2>
                        </div>
                      </div>`;
-    } 
-     let openFicha = main.getElementsByClassName('fichasContainer').addEventListener("click", openModal);
-     console.log(openFicha);
-                    
+                  openModal(todosArray);
+  } 
 }
 
 
+function openModal(todosArray){
+//le doy un espacio en main.html y lo tomo 
+let modalPersonajes = document.getElementById("backgroundModal"); 
+let clickPersonajes = document.getElementsByClassName("fichasContainer");
 
 
+for(let i=0; i<clickPersonajes.length; i++){
+ let clickFicha = clickPersonajes[i];
+ clickFicha.addEventListener("click",() =>{
+   modalPersonajes.innerHTML="";
+   modalPersonajes.style.display= "block";
+   modalPersonajes.innerHTML +=
+    `<div class="fichaModal">
+       <div id="contenedorInfo" class="info">
+          <div class="infoPersonajeModal">
+          <h1 class="name">${todosArray[i].name}</h1>
+          <h2 class="species">${todosArray[i].species} - ${todosArray[i].status}</h2>
+          <div class="modalOrigin">
+              <p class="titleModal">Dónde vive</p>
+              <div class="origin">${todosArray[i].origin.name}</div>
+          </div>
+          <div class="modalEpisode">
+              <p class="titleModal">Episodios donde aparece</p>
+              <div class="episode">${todosArray[i].episode.length}</div>
+          </div>
+          </div>
+       </div>
+     </div>`;
 
+     let closeModal = document.getElementsByClassName("closeModal")[0];
+     closeModal.addEventListener("click",()=>{
+       modalPersonajes.style.display= "none";
+       modalPersonajes.innerHTML = "";
+     });
 
-
+ });
+}
+}
 
 function filtraNombre(){
   let catchInput = (document.getElementById("input-search").value);
