@@ -31,7 +31,7 @@ const datosRyM= {
 
     ordenAZ : function (arrayOrden) {
       let dataEnter = (arrayOrden != undefined && arrayOrden.length > 0) ? arrayOrden : data.results;
-      console.log(dataEnter);
+    
 
       return dataEnter.sort(function(a, b) {
           if (a.name > b.name) {
@@ -48,7 +48,7 @@ const datosRyM= {
     // Función ordenar Z -A 
     ordenZA : function (arrayOrden) {
       let dataEnter = (arrayOrden != undefined && arrayOrden.length > 0) ? arrayOrden : data.results;
-      console.log(dataEnter);
+    
       return dataEnter.sort(function(a, b) {
           if (a.name < b.name) {
               return 1;
