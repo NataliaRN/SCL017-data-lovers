@@ -52,21 +52,21 @@ for(let i=0; i<clickPersonajes.length; i++){
    modalPersonajes.innerHTML +=
     `<div class="fichaModal">
        <div id="contenedorInfo" class="info">
-           <img src="${todosArray[i].image}" class="imgModal">
-           <div class="infoPersonajeModal">
-                 <h1 class="name" style="text-transform:uppercase">${todosArray[i].name}</h1>
-                 <h2 class="species">${todosArray[i].species} - ${todosArray[i].status}</h2>
-                 <div class="modalOrigin">
-                     <p class="titleModal">Dónde vive</p>
-                     <div class="origin">${todosArray[i].origin.name}</div>
-                 </div>
-                 <div class="modalEpisode">
-                     <p class="titleModal">Episodios en que aparece</p>
-                     <div class="episode">${todosArray[i].episode.length}</div>
-                 </div>
-           </div> 
-        </div>
-        <div class="close"><span class="closeModal">&times;</span></div>
+         
+=======
+          <div class="infoPersonajeModal">
+          <h1 class="name">${todosArray[i].name}</h1>
+          <h2 class="species">${todosArray[i].species} - ${todosArray[i].status}</h2>
+          <div class="modalOrigin">
+              <p class="titleModal">Dónde vive</p>
+              <div class="origin">${todosArray[i].origin.name}</div>
+          </div>
+          <div class="modalEpisode">
+              <p class="titleModal">Episodios donde aparece</p>
+              <div class="episode">${todosArray[i].episode.length}</div>
+          </div>
+          </div>
+       </div>
      </div>`;
 
      let closeModal = document.getElementsByClassName("closeModal")[0];
