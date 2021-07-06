@@ -128,7 +128,13 @@ header{
     height: 287px;
     margin: 10%;
     cursor: pointer;
-    box-shadow: 3px 3px 0px 0px rgba(163, 163, 163, 0.623);
+    box-shadow: 3px 3px 10px 2px rgba(163, 163, 163, 0.623);
+  }
+
+  .fichasContainer:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px 10px rgba(163, 163, 163, 0.623);
+    
   }
 
   .imagen-ficha-main{

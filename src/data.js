@@ -22,7 +22,9 @@ const datosRyM= {
     for (let i=0 ; i< personajes.length; i++){
       if (personajes[i].name.toLowerCase().includes(nombreInput)){
         arrayNombres.push(personajes[i]);
+        console.log(arrayNombres);
       }
+      
     }
     return arrayNombres;
 },
