@@ -36,25 +36,29 @@ selectInput.addEventListener("change", ()=> { //Función para disparar más de u
 
 function mostrarBichosMain(arrayTodos) {
   
-  for(let i = 0 ; i< 20 ;  i++){ //Iteración para sacar la imagen y el nombre
+  for(let i = 0 ; i< 50 ;  i++){ //Iteración para sacar la imagen y el nombre
     
     main.innerHTML += `<div class="container">
-                      <div class="fichasContainer id="fichasContainer">
+                      <div class="fichasContainer" id="fichasContainer">
                         <img class="imagen-ficha-main" src="${arrayTodos[i].image}"/>
                         <h2 class="nombreFichaMain">${arrayTodos[i].name}</h2>
                        </div>
                      </div>`;
                                      
   } 
+
+  openModal(arrayTodos);
  console.log(main);
+
 
 }
 
 
-function openModal(arrayTodos){
+function openModal(array){
 
 let clickPersonajes = document.getElementsByClassName("fichasContainer");
-
+let modalPersonajes = document.getElementById("modal-container");
+modalPersonajes.style.display= "none";
 
     for(let i=0; i<clickPersonajes.length; i++){
 
@@ -62,20 +66,22 @@ let clickPersonajes = document.getElementsByClassName("fichasContainer");
     
     
     clickFicha.addEventListener("click" , ()=>{ 
+      
       modalPersonajes.style.display= "block";
       modalPersonajes.innerHTML +=
         `<div class="fichaModal">
           <div id="contenedorInfo" class="info">
+            <img class="imgModal" src=${array[i].image}>
               <div class="infoPersonajeModal">
-              <h1 class="name">${arrayTodos[i].name}</h1>
-              <h2 class="species">${arrayTodos[i].species} - ${arrayTodos[i].status}</h2>
+              <h1 class="name">${array[i].name}</h1>
+              <h2 class="species">${array[i].species} - ${array[i].status}</h2>
               <div class="modalOrigin">
                   <p class="titleModal">Dónde vive</p>
-                  <div class="origin">${arrayTodos[i].origin.name}</div>
+                  <div class="origin">${array[i].origin.name}</div>
               </div>
               <div class="modalEpisode">
                   <p class="titleModal">Episodios donde aparece</p>
-                  <div class="episode">${arrayTodos[i].episode.length}</div>
+                  <div class="episode">${array[i].episode.length}</div>
               </div>
               </div>
           </div>
@@ -93,10 +99,10 @@ let clickPersonajes = document.getElementsByClassName("fichasContainer");
 }
 
 
-function filtraNombre(arrayNombres){
+function filtraNombre(){
   let catchInput = (document.getElementById("input-search").value);
   let arrayNombres = datosRyM.filterByName(catchInput);
-   //este array se trae todo el objeto
+   console.log(arrayNombres);
 
   if(arrayNombres.length === 0){
     console.log("El objeto está vacío");  //Hacer mensaje de error dinámico y resetear el input

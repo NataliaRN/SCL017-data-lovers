@@ -151,10 +151,11 @@ header{
 
 
 /* FICHAS MODAL */
- .backgroundModal{
-   display: flex;
-   align-items: center;
-   margin: auto;
+ .modal-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
   background:rgba(0,0,0,0.7);
   position:fixed;
   z-index: 1;
@@ -169,6 +170,8 @@ header{
  .fichaModal{
    display: flex;
    flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-start;
    background-color: #3d3d3d;
    border-radius: 15px;
    box-shadow: 0 0 10px #7a7a7a, 0 0 10px #7a7a7a, 0 0 20px #7a7a7a;
@@ -192,6 +195,7 @@ header{
  }
 
  .imgModal{
+
    width: 300px;
    height: 300px;
    border-radius: 15px;
@@ -201,12 +205,10 @@ header{
  }
 
  .closeModal{
-   display: flex;
-   justify-content: end;
    cursor: pointer;
    font-size: 60px;
    font-weight: bold;
-   margin-right: 30px;
+   text-align: start;
  }
 
  .titleModal{
