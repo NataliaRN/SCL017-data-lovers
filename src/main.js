@@ -44,30 +44,56 @@ function mostrarBichosMain(arrayTodos) {
                         <h2 class="nombreFichaMain">${arrayTodos[i].name}</h2>
                        </div>
                      </div>`;
-                     
                                      
   } 
-
- let click = document.getElementById("fichasContainer");
- console.log(click.innerHTML);
  console.log(main);
 
 }
 
 
-function openModal(){
+function openModal(arrayTodos){
 
-let clickFicha = document.getElementsByClassName("fichasContainer");
-let modalPersonajes = document.getElementsByClassName("modal-container");
-  
+let clickPersonajes = document.getElementsByClassName("fichasContainer");
+
+
+    for(let i=0; i<clickPersonajes.length; i++){
+
+    let clickFicha = clickPersonajes[i];
     
-    clickFicha.addEventListener("click" , console.log(modalPersonajes, "este es el modalPersonajes")); 
-     
+    
+    clickFicha.addEventListener("click" , ()=>{ 
+      modalPersonajes.style.display= "block";
+      modalPersonajes.innerHTML +=
+        `<div class="fichaModal">
+          <div id="contenedorInfo" class="info">
+              <div class="infoPersonajeModal">
+              <h1 class="name">${arrayTodos[i].name}</h1>
+              <h2 class="species">${arrayTodos[i].species} - ${arrayTodos[i].status}</h2>
+              <div class="modalOrigin">
+                  <p class="titleModal">Dónde vive</p>
+                  <div class="origin">${arrayTodos[i].origin.name}</div>
+              </div>
+              <div class="modalEpisode">
+                  <p class="titleModal">Episodios donde aparece</p>
+                  <div class="episode">${arrayTodos[i].episode.length}</div>
+              </div>
+              </div>
+          </div>
+          <div class="close"><span class="closeModal">&times;</span></div> 
+        </div>`;
+      
 
+        let closeModal = document.getElementsByClassName("closeModal")[0];
+        closeModal.addEventListener("click",()=>{
+          modalPersonajes.style.display= "none";
+          modalPersonajes.innerHTML = "";
+        });
+      });
+}
 }
 
 
-function filtraNombre(){
+function filtraNombre(arrayNombres){
   let catchInput = (document.getElementById("input-search").value);
   let arrayNombres = datosRyM.filterByName(catchInput);
    //este array se trae todo el objeto
