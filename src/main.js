@@ -3,15 +3,14 @@ console.log(datosRyM); //console log que nos dice los metodos de DATA.JS
 
 //Variables, constantes y atrapadas de elementos
 const lupa = document.getElementById("search");
-const arrayTodos = datosRyM.arrayQueMuestraTodos();
+const arrayTodos = datosRyM.arrayQueMuestraTodos(); //naty tiene TODOSARRAY = ...
 const main = document.getElementById("main-container");
 let selectInput = document.getElementById("filtro");
 let arrayOrden; 
-const reset = document.getElementsByTagName("header");
 
 //////////eventos////////////
 
-window.addEventListener("load" , ()=>{ //función para disparar todos los bichos
+window.addEventListener("load" , ()=>{ //función para disparar todos los bichos en el main
   mostrarBichosMain(arrayTodos);
 } );
 
@@ -25,45 +24,54 @@ selectInput.addEventListener("change", ()=> { //Función para disparar más de u
   
     case 'Z-A' : ordenZA();
       break;
+    case '...' :
+      main.innerHTML="";
+       mostrarBichosMain(arrayTodos);
+    break;
+
   }
 })
 
 //////////////////funciones////////////////
 
 function mostrarBichosMain(arrayTodos) {
-
-  main.innerHTML = "";
   
-  for(let i = 0 ; i< 20 ;  i++){ //Iteración para sacar la imagen y el nombre
+  for(let i = 0 ; i< 50 ;  i++){ //Iteración para sacar la imagen y el nombre
     
     main.innerHTML += `<div class="container">
-                      <div class="fichasContainer">
-                        <img src="${arrayTodos[i].image}" class="imagen-ficha-main">
+                      <div class="fichasContainer" id="fichasContainer">
+                        <img class="imagen-ficha-main" src="${arrayTodos[i].image}"/>
                         <h2 class="nombreFichaMain">${arrayTodos[i].name}</h2>
                        </div>
                      </div>`;
-                     openModal(arrayTodos);
-                 
+                                     
   } 
+
+  openModal(arrayTodos);
+ console.log(main);
 
 
 }
 
-function openModal(array){
-//le doy un espacio en main.html y lo tomo 
-let modalPersonajes = document.getElementById("backgroundModal"); 
-let clickPersonajes = document.getElementsByClassName("fichasContainer");
 
+function openModal(array){
+
+let clickPersonajes = document.getElementsByClassName("fichasContainer");
+let modalPersonajes = document.getElementById("modal-container");
+modalPersonajes.style.display= "none";
 
     for(let i=0; i<clickPersonajes.length; i++){
+
     let clickFicha = clickPersonajes[i];
-    clickFicha.addEventListener("click",() =>{
-      for (let i= 0; i=array.length; i++){
-      modalPersonajes.innerHTML="";
+    
+    
+    clickFicha.addEventListener("click" , ()=>{ 
+      
       modalPersonajes.style.display= "block";
       modalPersonajes.innerHTML +=
         `<div class="fichaModal">
           <div id="contenedorInfo" class="info">
+            <img class="imgModal" src=${array[i].image}>
               <div class="infoPersonajeModal">
               <h1 class="name">${array[i].name}</h1>
               <h2 class="species">${array[i].species} - ${array[i].status}</h2>
@@ -77,17 +85,16 @@ let clickPersonajes = document.getElementsByClassName("fichasContainer");
               </div>
               </div>
           </div>
+          <div class="close"><span class="closeModal">&times;</span></div> 
         </div>`;
-        console.log("este click se supone que construye el modal");
+      
 
         let closeModal = document.getElementsByClassName("closeModal")[0];
         closeModal.addEventListener("click",()=>{
           modalPersonajes.style.display= "none";
           modalPersonajes.innerHTML = "";
         });
-      }
-
-    });
+      });
 }
 }
 
@@ -95,29 +102,34 @@ let clickPersonajes = document.getElementsByClassName("fichasContainer");
 function filtraNombre(){
   let catchInput = (document.getElementById("input-search").value);
   let arrayNombres = datosRyM.filterByName(catchInput);
-   //este array se trae todo el objeto
+   console.log(arrayNombres);
 
   if(arrayNombres.length === 0){
     console.log("El objeto está vacío");  //Hacer mensaje de error dinámico y resetear el input
   };
 
+  main.innerHTML = "";
   mostrarBichosMain(arrayNombres);
-  openModal(arrayNombres);
+  
     
  
 }
 
 function ordenAZ() {
   arrayOrden = datosRyM.ordenAZ(arrayOrden);
+
+  main.innerHTML = "";
   mostrarBichosMain(arrayOrden);
-  openModal(arrayOrden);
+  
 console.log('esta funcionando la funcion de opcion AZ');
 }
 
 function ordenZA() {
   arrayOrden = datosRyM.ordenZA(arrayOrden);
+
+  main.innerHTML = "";
   mostrarBichosMain(arrayOrden);
-  openModal(arrayOrden);
+  
 console.log('esta funcionando la funcion de opcion ZA');  
 }
 
