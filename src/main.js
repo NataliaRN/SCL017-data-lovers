@@ -51,7 +51,7 @@ function mostrarBichosMain(arrayTodos) {
     fichasContainer.appendChild(img);
     container.appendChild(fichasContainer)
 
-    const name = document.createElement("div")
+    const name = document.createElement("h1")
     name.className = "nombreFichaMain";
     
     const nameText = document.createTextNode(arrayTodos[i].name);
