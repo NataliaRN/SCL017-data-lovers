@@ -36,16 +36,41 @@ selectInput.addEventListener("change", ()=> { //Función para disparar más de u
 
 function mostrarBichosMain(arrayTodos) {
   
-  for(let i = 0 ; i< 50 ;  i++){ //Iteración para sacar la imagen y el nombre
+  for(let i = 0 ; i< arrayTodos.length;  i++){ 
+
+    const container = document.createElement("div")
+    container.className= "container";
+
+    const fichasContainer = document.createElement("div")
+    fichasContainer.className = "fichasContainer";
+    container.appendChild(fichasContainer);
+
+    const img = document.createElement("img")
+    img.src = arrayTodos[i].image;
+    img.className = "imagen-ficha-main";
+    fichasContainer.appendChild(img);
+    container.appendChild(fichasContainer)
+
+    const name = document.createElement("div")
+    name.className = "nombreFichaMain";
     
-    main.innerHTML += `<div class="container">
-                      <div class="fichasContainer" id="fichasContainer">
-                        <img class="imagen-ficha-main" src="${arrayTodos[i].image}"/>
-                        <h2 class="nombreFichaMain">${arrayTodos[i].name}</h2>
-                       </div>
-                     </div>`;
+    const nameText = document.createTextNode(arrayTodos[i].name);
+    name.appendChild(nameText);
+    fichasContainer.appendChild(name);
+    container.appendChild(fichasContainer);
+
+    document.getElementById("main-container").appendChild(container);
+
+    //Iteración para sacar la imagen y el nombre
+    
+  //   main.innerHTML += `<div class="container">
+  //                     <div class="fichasContainer" id="fichasContainer">
+  //                       <img class="imagen-ficha-main" src="${arrayTodos[i].image}"/>
+  //                       <h2 class="nombreFichaMain">${arrayTodos[i].name}</h2>
+  //                      </div>
+  //                    </div>`;
                                      
-  } 
+   } 
 
   openModal(arrayTodos);
  console.log(main);
