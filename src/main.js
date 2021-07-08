@@ -3,7 +3,7 @@ console.log(datosRyM); //console log que nos dice los metodos de DATA.JS
 
 //Variables, constantes y atrapadas de elementos
 const lupa = document.getElementById("search");
-const arrayTodos = datosRyM.arrayQueMuestraTodos(); //naty tiene TODOSARRAY = ...
+const arrayTodos = datosRyM.arrayQueMuestraTodos(); 
 const main = document.getElementById("main-container");
 let selectInput = document.getElementById("filtro");
 let arrayOrden; 
@@ -36,7 +36,7 @@ selectInput.addEventListener("change", ()=> { //Función para disparar más de u
 
 function mostrarBichosMain(arrayTodos) {
   
-  for(let i = 0 ; i< 50 ;  i++){ //Iteración para sacar la imagen y el nombre
+  for(let i = 0 ; i<20 ;  i++){ //Iteración para sacar la imagen y el nombre
     
     main.innerHTML += `<div class="container">
                       <div class="fichasContainer" id="fichasContainer">
@@ -105,8 +105,10 @@ function filtraNombre(){
    console.log(arrayNombres);
 
   if(arrayNombres.length === 0){
-    console.log("El objeto está vacío");  //Hacer mensaje de error dinámico y resetear el input
-  };
+    console.log("El objeto está vacío");  
+    
+    //Hacer mensaje de error dinámico 
+  }
 
   main.innerHTML = "";
   mostrarBichosMain(arrayNombres);
