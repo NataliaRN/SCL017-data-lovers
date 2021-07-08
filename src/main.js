@@ -60,15 +60,6 @@ function mostrarBichosMain(arrayTodos) {
     container.appendChild(fichasContainer);
 
     document.getElementById("main-container").appendChild(container);
-
-    //Iteración para sacar la imagen y el nombre
-    
-  //   main.innerHTML += `<div class="container">
-  //                     <div class="fichasContainer" id="fichasContainer">
-  //                       <img class="imagen-ficha-main" src="${arrayTodos[i].image}"/>
-  //                       <h2 class="nombreFichaMain">${arrayTodos[i].name}</h2>
-  //                      </div>
-  //                    </div>`;
                                      
    } 
 
