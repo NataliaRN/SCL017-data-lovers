@@ -4,7 +4,7 @@ let personajes = data.results; //Esto es un array de objetos
 
 const datosRyM= {
   arrayQueMuestraTodos: function () {
-    let arrayPersonajes= [];
+    const arrayPersonajes= [];
 
     for (let i=0 ; i < personajes.length ; i++){
       arrayPersonajes.push(personajes[i]);
