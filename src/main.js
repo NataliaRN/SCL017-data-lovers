@@ -3,7 +3,7 @@ console.log(datosRyM); //console log que nos dice los metodos de DATA.JS
 
 //Variables, constantes y atrapadas de elementos
 const lupa = document.getElementById("search");
-const arrayTodos = datosRyM.arrayQueMuestraTodos(); //naty tiene TODOSARRAY = ...
+const arrayTodos = datosRyM.arrayQueMuestraTodos(); 
 const main = document.getElementById("main-container");
 let selectInput = document.getElementById("filtro");
 let arrayOrden; 
@@ -51,7 +51,7 @@ function mostrarBichosMain(arrayTodos) {
     fichasContainer.appendChild(img);
     container.appendChild(fichasContainer)
 
-    const name = document.createElement("div")
+    const name = document.createElement("h1")
     name.className = "nombreFichaMain";
     
     const nameText = document.createTextNode(arrayTodos[i].name);
@@ -60,15 +60,6 @@ function mostrarBichosMain(arrayTodos) {
     container.appendChild(fichasContainer);
 
     document.getElementById("main-container").appendChild(container);
-
-    //Iteración para sacar la imagen y el nombre
-    
-  //   main.innerHTML += `<div class="container">
-  //                     <div class="fichasContainer" id="fichasContainer">
-  //                       <img class="imagen-ficha-main" src="${arrayTodos[i].image}"/>
-  //                       <h2 class="nombreFichaMain">${arrayTodos[i].name}</h2>
-  //                      </div>
-  //                    </div>`;
                                      
    } 
 
@@ -130,7 +121,10 @@ function filtraNombre(){
    console.log(arrayNombres);
 
   if(arrayNombres.length === 0){
-    console.log("El objeto está vacío");  //Hacer mensaje de error dinámico y resetear el input
+    
+    console.log("El objeto está vacío");  
+    
+    //Hacer mensaje de error dinámico 
   }
 
   main.innerHTML = "";
