@@ -121,6 +121,7 @@ function filtraNombre(){
    console.log(arrayNombres);
 
   if(arrayNombres.length === 0){
+    
     console.log("El objeto está vacío");  
     
     //Hacer mensaje de error dinámico 
@@ -150,5 +151,63 @@ function ordenZA() {
   
 console.log('esta funcionando la funcion de opcion ZA');  
 }
+
+//Paginacion
+
+let paginaactual = 1;
+const txPagina = 20;
+let pagina = document.getElementById("pagina");
+let botonsiguiente = document.getElementById("botonsiguiente");
+let botonatras = document.getElementById("botonatras");
+
+
+botonatras.addEventListener("click", () => { b_atras() })
+
+function b_atras() {
+    if (paginaactual > 1) {
+        paginaactual--;
+        changePage(paginaactual);
+    }
+}
+
+botonsiguiente.addEventListener("click", () => { b_siguiente() })
+
+function b_siguiente() {
+    if (paginaactual > 1) {
+        paginaactual++;
+        changePage(paginaactual);
+    }
+}
+function changePage(pagina) {
+
+    if (pagina < 1) pagina = 1;
+    if (pagina > numPages()) pagina = numPages();
+    openModal.innerHTML = "";
+    paginaactual = pagina ;    
+    crearTarjetas (txPagina, pagina, arrayTodos);
+    console.log
+
+    pagina.innerHTML = pagina + "/" + numPages();
+    
+
+    if (pagina == 1) {
+        botonatras.style.visibility = "hidden";
+    } else { botonatras.style.visibility = "visible"; }
+    if (pagina == numPages()) {
+        botonsiguiente.style.visibility = "hidden";
+    } else {
+        botonsiguiente.style.visibility = "visible";
+
+    }
+}
+
+function numPages() {
+    return Math.ceil(arrayTodos.length / pagina);
+}
+
+window.onload = function() {
+    changePage(1);
+}
+
 
 
